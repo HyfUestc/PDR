@@ -1,0 +1,138 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/outside"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:layout_marginTop="0dp"
+    android:alpha="1"
+    android:padding="0dp"
+    android:scrollbars="vertical"
+    tools:context=".MainActivity" >
+
+    
+
+    
+    
+	<!-- 地图 -->
+    <ImageView
+        android:id="@+id/map"
+        android:layout_width="250dp"
+        android:layout_height="500dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/control_new_5f"
+        android:contentDescription="@string/bgimg"
+        android:visibility="visible" />
+	
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="right|top"
+	    android:layout_marginRight="20dp"
+	    android:orientation="vertical">
+	    <RadioGroup 
+	        android:id="@+id/mapchoice"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content">
+	        <RadioButton 
+	            android:id="@+id/btn_5f"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="新楼5F"/>
+	        <RadioButton 
+	            android:id="@+id/btn_9_526"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="教九526"/>
+	    </RadioGroup>
+	</LinearLayout>
+    
+    
+    
+	<!-- 按钮组 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical" >
+     
+        <ToggleButton
+            android:id="@+id/btn_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:textOn="测试"
+            android:textOff="关闭" />
+
+        <ToggleButton
+            android:id="@+id/btn_board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:textOn="区域"
+            android:textOff="关闭" />
+
+        <ToggleButton
+            android:id="@+id/btn_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:textOn="地图"
+            android:textOff="关闭" />
+        
+        <Button 
+            android:id="@+id/btn_astar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:text="A*"/>
+        
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:text="重启" />
+        
+        <TextView
+            android:id="@+id/step_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="0dp"
+            android:text="步数"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <!-- mark一下，后面可以把坐标系用一个选择开关来选择是否显示 -->
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/axis"
+        android:contentDescription="@string/axis"
+        android:visibility="visible" />
+    
+    <AnalogClock
+        android:id="@+id/analogClock1"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:visibility="invisible"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="40dp" />
+
+	<!-- 屏幕最下方是对手机屏幕信息的相关显示，不同手机显示不同内容 -->
+    <TextView
+        android:id="@+id/screenInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:text="TextView" />
+
+</FrameLayout>
